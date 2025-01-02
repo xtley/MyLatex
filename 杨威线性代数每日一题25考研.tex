@@ -1,0 +1,102 @@
+\documentclass[lang=cn,10pt]{elegantbook}
+\usepackage{ctex} % 引入 ctex 宏包以支持中文
+
+\title{杨威线性代数每日一题25考研}
+\subtitle{YuTeng\LaTeX{}}
+
+\author{Yu Teng}
+\institute{和光同尘}
+\date{December 29, 2024}
+\version{1.0}
+
+\extrainfo{不要以为抹消过去，重新来过，即可发生什么改变。—— 比企谷八幡}
+
+\setcounter{tocdepth}{3}
+
+\logo{logo-blue.png}
+\cover{cover.jpg}
+
+% 本文档命令
+\usepackage{array}
+\newcommand{\ccr}[1]{\makecell{{\color{#1}\rule{1cm}{1cm}}}}
+
+\begin{document}
+
+\maketitle
+
+\noindent 【2024-05-06】设$n$阶矩阵$A$的秩为$r(r>0)$，且满足$A^k=O$($k$为正整数)，则
+
+\noindent (1) $A$的特征值为\rule{3cm}{0.2mm}。
+
+\noindent (2) $ \left| A+aE \right|= $\rule{3cm}{0.2mm}。
+
+\noindent (3) $ \left| E+a_1A+a_2A^2+\cdots +a_{k-1}A^{k-1} \right|= $\rule{3cm}{0.2mm}。
+
+\noindent (4) $A$共有\rule{3cm}{0.2mm}个线性无关的特征向量。
+
+\noindent (5) $A$相似对角化\rule{3cm}{0.2mm}。
+
+\noindent 解:
+
+\noindent$
+\left( 1 \right) \text{设}\lambda \text{是}A\text{的特征值则，}A\alpha =\lambda \alpha \text{（}\alpha \ne 0\text{），}A^2\alpha =\lambda ^2\alpha ,\cdots ,A^k\alpha =\lambda ^k\alpha =O\text{由于}\alpha \ne 0\text{，故}\lambda ^k=0\text{，即}\lambda =0\text{。}\text{即若}\lambda \text{是}A\text{的特征值则}\lambda =0\text{。即}A\text{的特征值为}\lambda _1=\lambda _2=\cdots =\lambda _n=0\text{。}
+$
+
+\noindent$
+\left( 2 \right) \text{引理:若}\lambda \text{是}A\text{的特征值，则}f\left( \lambda \right) \text{是}f\left( A \right) \text{的特征值。}A+aE\text{的特征值是}a\text{，}a,\cdots a\left( n\text{个}a \right) \text{。即}\left| A+aE\right|=\lambda _1\lambda _2\cdots \lambda _n=a^n\text{。}
+$
+
+\noindent$
+\left( 3 \right) 1^n=1\text{。}
+$
+
+\noindent$
+\left( 4 \right) \text{因为}A\text{的特征值只有一个0，所以就是看}Ax=0\text{的基础解系含有的解向量个数，即求}n-r\left( A \right) =n-r\text{。}
+$
+
+\noindent$
+\left( 5 \right) \text{因为}A\text{只有}n-r<n\text{个线性无关的特征向量，所以}A\text{不能相似对角化。}
+$
+
+\noindent【2024-05-06】$
+\text{多项式}f\left( x \right) =\left| \begin{matrix}
+	1&		x^2&		3&		x\\
+	x&		x&		-2&		x^2\\
+	2x^2&		2&		x&		5\\
+	1&		-1&		3x&		2\\
+\end{matrix} \right|\text{的最高项系数和常数项分别为}\rule{3cm}{0.2mm}\text{。}
+$
+
+\noindent 解: 
+
+\noindent$
+\text{本题4行每行的最高项可以同时取得，所以最高项系数为}\left( -1 \right) ^{\tau \left( 2413 \right)}\cdot x^2\cdot x^2\cdot 2x^2\cdot 3x=-6x^7\text{。}
+$
+
+\noindent$
+\text{常数项由于}f\left( x \right) =a_4x^4+a_3x^3+\cdots +a_1x^1+a_0\text{，所以}f\left( 0 \right) =\text{常数项。}
+$
+
+\noindent$
+\text{所以常数项为}\left| \begin{matrix}
+	1&		0&		3&		0\\
+	0&		0&		-2&		0\\
+	0&		2&		0&		5\\
+	1&		-1&		0&		2\\
+\end{matrix} \right|=\left( -2 \right) \cdot \left( -1 \right) ^{2+3}\cdot \left| \begin{matrix}
+	1&		0&		0\\
+	0&		2&		5\\
+	1&		-1&		2\\
+\end{matrix} \right|=2\cdot \left( 4+5 \right) =18\text{。}
+$
+
+
+
+
+
+
+
+
+
+
+\end{document}

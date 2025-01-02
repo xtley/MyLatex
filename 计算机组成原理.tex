@@ -1,0 +1,102 @@
+\documentclass[lang=cn,10pt]{elegantbook}
+\usepackage{listings} % 引入 listings 包
+\usepackage{xcolor} % 引入 xcolor 包，用于颜色定义
+% 设置 listings 包的选项
+\lstset{
+    language=C++, % 代码语言
+    basicstyle=\ttfamily, % 使用等宽字体
+    keywordstyle=\color{blue}, % 关键词颜色
+    commentstyle=\color{green}, % 注释颜色
+    stringstyle=\color{red}, % 字符串颜色
+    breaklines=true, % 自动换行
+    numbers=left, % 行号在左侧显示
+    numberstyle=\tiny, % 行号字体大小
+    frame=single, % 代码框样式
+    showstringspaces=false, % 不显示字符串中的空格标记
+}
+
+
+\title{计算机考研408：计算机组成原理}
+\subtitle{YuTeng\LaTeX{}}
+
+\author{Yu Teng}
+\institute{和光同尘}
+\date{December 29, 2024}
+\version{1.0}
+
+\extrainfo{不要以为抹消过去，重新来过，即可发生什么改变。—— 比企谷八幡}
+
+\setcounter{tocdepth}{3}
+
+\logo{logo-blue.png}
+\cover{cover.jpg}
+
+% 本文档命令
+\usepackage{array}
+\newcommand{\ccr}[1]{\makecell{{\color{#1}\rule{1cm}{1cm}}}}
+
+
+\begin{document}
+
+\maketitle
+\frontmatter
+
+\tableofcontents
+
+\mainmatter
+
+\chapter{计算机系统概述}
+
+\section{计算机发展历程}
+
+\subsection{计算机硬件的发展}
+
+\begin{lstlisting}
+    #include <iostream>
+    
+    int main() {
+        std::cout << "Hello, World!" << std::endl;
+        return 0;
+    }
+\end{lstlisting}
+
+\chapter{数据的表示与运算}
+
+\section{原码 反码 补码 移码}
+
+\subsection{定义}
+真值: 日常生活中使用的，带有+,-号的数字，如+15，-8，真值是机器数代表的实际值。 \\
+机器数: 就真值的符号数字化，0表示正好，1表示负号，真值有原码，反码，补码等表示方法，如0101表示+5。\\
+原码: 用机器数的最高位表示数的符号，其余各位数表示数的绝对值。\\
+反码: 符号位与原码相同，真值为正数时，数值位与原码相同，真值为负数时，数值位与原码相反。\\
+补码: 负数时=反码+1。\\
+移码:
+
+\subsection{相互转换}
+正数时: 原码=反码=补码。\\
+负数时(符号位为1): \\
+原码$\rightarrow$反码: 除符号位各位取反。\\
+原码$\rightarrow$补码:  ①原码除符号位取反+1或反码+1。\\
+②快速计算方法：对原码非符号位从右往左扫描，右起第一个1及其右边的0保持不变，其余各位取反，符号位保持不变(补码$\rightarrow$原码同样适用)。\\
+原码$\rightarrow$移码：
+
+\subsection{表示范围}
+以8为二进制数为例：0000 0000\\
+0的个数:  ① 原码: 0000 0000 正0和 1000 0000负0。\\
+② 反码: 0000 0000 和 1111 1111。\\
+③ 补码: 0000。\\
+④ 移码: 1000 0000。\\
+范围：\\
+	原码: $-127\sim+127,-(2^n-1) \sim 2^n-1$。\\
+	反码:$-127\sim+127,-(2^n-1)\sim2^n-1$。\\
+补码: $-128\sim127,2^n\sim2^n-1$。\\
+移码:$-128\sim+127,2^n\sim2^n-1$。
+
+
+\chapter{数据的表示与运算}
+
+
+
+
+
+\end{document}
